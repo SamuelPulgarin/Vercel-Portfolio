@@ -26,7 +26,15 @@ export default function Home() {
       {/* Global Interactive Effects */}
       <SplashCursor />
       <ClickSpark />
-      <FloatingLines />
+      <FloatingLines
+        linesGradient={['#0a3d62', '#1e90ff', '#61dafb', '#1e90ff', '#0a3d62']}
+        enabledWaves={['top', 'middle', 'bottom']}
+        lineCount={[4, 6, 3]}
+        animationSpeed={0.6}
+        interactive={true}
+        parallax={true}
+        parallaxStrength={0.15}
+      />
 
       {/* Content */}
       <div className="relative z-10">

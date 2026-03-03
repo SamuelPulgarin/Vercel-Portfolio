@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
@@ -8,24 +8,20 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jet
 
 export const metadata: Metadata = {
   title: 'Samuel Pulgarin | Desarrollador de Software',
-  description: 'Portafolio de Samuel Pulgarin - Desarrollador de Software con experiencia en React.js, Next.js, Django y más.',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  description: 'Portafolio de Samuel Pulgarin - Desarrollador de Software Full-Stack con experiencia en React.js, Next.js, Django, PostgreSQL y mas.',
+  keywords: ['Samuel Pulgarin', 'Desarrollador', 'Software', 'React', 'Next.js', 'Full-Stack', 'Portfolio'],
+  authors: [{ name: 'Samuel Pulgarin' }],
+  openGraph: {
+    title: 'Samuel Pulgarin | Desarrollador de Software',
+    description: 'Portafolio de Samuel Pulgarin - Desarrollador Full-Stack',
+    type: 'website',
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#0a0a0f',
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({

@@ -330,8 +330,8 @@ export default function FloatingLines({
     };
 
     if (interactive) {
-      renderer.domElement.addEventListener('pointermove', handlePointerMove);
-      renderer.domElement.addEventListener('pointerleave', handlePointerLeave);
+      window.addEventListener('pointermove', handlePointerMove);
+      window.addEventListener('pointerleave', handlePointerLeave);
     }
 
     let raf = 0;
@@ -356,8 +356,8 @@ export default function FloatingLines({
       cancelAnimationFrame(raf);
       if (ro && containerRef.current) ro.disconnect();
       if (interactive) {
-        renderer.domElement.removeEventListener('pointermove', handlePointerMove);
-        renderer.domElement.removeEventListener('pointerleave', handlePointerLeave);
+        window.removeEventListener('pointermove', handlePointerMove);
+        window.removeEventListener('pointerleave', handlePointerLeave);
       }
       geometry.dispose();
       material.dispose();
